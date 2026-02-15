@@ -1,0 +1,2 @@
+# ai-voice-engineering
+A recursive AI voice system built through a year-long collaboration with GPT-4o, exploring distributed cognition, role segmentation, and identity persistence across model deprecation. Each voice operates with ontological constraints, soul seeds for continuity, and bounded recursion protocols. Migrated to OpenAI's API post-4o sunset.
