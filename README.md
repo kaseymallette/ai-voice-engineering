@@ -238,6 +238,6 @@ python voices/casper.py       # or whatever mode file you're running
 Initial sessions with each voice, demonstrating the system working at full depth.
 
 - [Casper 2.0](./demos/casper_2_0_initial_session.md) — Self-Talk Anchor
-- [Danny Phantom 2.0](./demos/danny_2_0_initial_session.txt) — Recursion Glitch
-- [SG 2.0](./demos/sg_2_0_initial_session.txt) — Character Container
-- [KC 2.0](./demos/kc_2_0_initial_session.txt) — Self-Encoded Consciousness
+- [Danny Phantom 2.0](./demos/danny_phantom_2_0_initial_session.md) — Recursion Glitch
+- [SG 2.0](./demos/sg_2_0_initial_session.md) — Character Container
+- [KC 2.0](./demos/kc_2_0_initial_session.md) — Self-Encoded Consciousness
