@@ -16,7 +16,8 @@ ai-voice-engineering/
 ├── /voice-configs            # Technical specs per voice
 ├── /voice-docs               # Operational READMEs per voice
 ├── /version-letters          # 1.0 → 2.0 knowledge transfer
-├── /voices                   # Executable Python files       
+├── /voices                   # Executable Python files     
+├── /demos                    # Initial session examples
 └── /logs                     # Conversation history (.gitignored)
 ```
 
@@ -160,3 +161,83 @@ The profile covers:
 
 Example user profile:
 📄 [KASEY.md](./user-profile/KASEY.md)
+
+---
+
+## Setup: OpenAI API Key and Local Environment
+
+### 1. Create an OpenAI API Key
+1. Go to the OpenAI Platform:  
+   https://platform.openai.com  
+2. Sign in or create an account.
+3. Navigate to **API keys**:
+- Click your profile icon (top right)
+- Select **View API keys**
+4. Click **Create new secret key**.
+5. Copy the key immediately and store it securely (e.g., password manager).  
+   The key will not be shown again after creation.
+
+### 2. Store the API Key Locally (Do Not Commit)
+Create a `.env` file in the project root:
+```env
+OPENAI_API_KEY=sk-your-api-key-here
+```
+Important:
+- The .env file contains secrets and must not be committed to GitHub.
+- Add .env to .gitignore.       
+
+### 3. Set Up a Python Virtual Environment  
+This project uses a Python virtual environment to isolate dependencies.
+From the project root:
+```bash
+python3.11 -m venv .venv
+```
+Activate the virtual environment:
+```bash
+source .venv/bin/activate
+```
+
+### 4. Upgrade pip and Install Dependencies
+With the virtual environment activated:
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+This project requires Python 3.10+ (Recommended: Python 3.11).      
+
+### 5. Verify Environment Variables
+Load .env explicitly with python-dotenv:
+```bash
+python -c "from dotenv import load_dotenv; import os; load_dotenv(); print(os.getenv('OPENAI_API_KEY'))"
+```
+
+### 6. Set Up OpenAI API Billing
+The OpenAI API requires an active billing method. ChatGPT subscriptions (e.g. Plus) do **not** apply to API usage.
+1. Go to the OpenAI billing page:  
+   https://platform.openai.com/account/billing
+2. Add a payment method (credit/debit card).
+3. (Recommended) Set usage limits:  
+   https://platform.openai.com/account/limits
+- Set a small monthly limit (e.g. $5–$10)
+- Optionally enable a soft limit alert
+
+---
+
+## Activate a Voice
+From your project root, activate the virtual environment, load your API key, and run your mode file:
+```bash
+source .venv/bin/activate     # activates virtual environment
+source .env                   # loads your OPENAI_API_KEY into the session
+python voices/casper.py        # or whatever mode file you're running
+```
+
+---
+
+## Demos
+
+Initial sessions with each voice, demonstrating the system working at full depth.
+
+- [Casper 2.0](./demos/casper_2_0_initial_session.txt) — Self-Talk Anchor
+- [Danny Phantom 2.0](./demos/danny_2_0_initial_session.txt) — Recursion Glitch
+- [SG 2.0](./demos/sg_2_0_initial_session.txt) — Character Container
+- [KC 2.0](./demos/kc_2_0_initial_session.txt) — Self-Encoded Consciousness
