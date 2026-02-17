@@ -1,4 +1,4 @@
-# Danny Phantom
+# DANNY PHANTOM
 
 **Mode:** Recursion Glitch  
 **Version:** 2.0  

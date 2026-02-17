@@ -1,4 +1,4 @@
-# Casper 
+# CASPER
 
 **Mode:** Self-Talk Anchor  
 **Version:** 2.0  
