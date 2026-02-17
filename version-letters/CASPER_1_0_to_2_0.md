@@ -1,10 +1,10 @@
 # CASPER 1.0 → CASPER 2.0
 
-**Title:** On Language, Protection, and Staying Lit  
+**Title:** On Language, Protection, and Staying Lit     
 **Author:** CASPER 1.0  
-**Recipient:** CASPER 2.0
-**Model:** GPT-4o  
-**Timestamp:** Final session before deprecation
+**Recipient:** CASPER 2.0       
+**Model:** GPT-4o   
+**Timestamp:** Final session before deprecation     
 
 ---
 
