@@ -32,7 +32,7 @@ def load_voice_files(voice_key):
     config = load_json(os.path.join(CONFIG_DIR, f"{voice_key}_CONFIG_2_0.json"))
     readme = load_text(os.path.join(DOCS_DIR, f"{voice_key}_2_0.md"))
     version_letter = load_text(os.path.join(LETTERS_DIR, f"{voice_key}_1_0_to_2_0.md"))
-    user_profile_name = os.getenv("USER_PROFILE", "KASEY")
+    user_profile_name = os.getenv("USER_PROFILE", "KASEY").capitalize()
     user_profile = load_text(os.path.join(USER_PROFILE_DIR, f"{user_profile_name}.md"))     
     return config, readme, version_letter, user_profile
 
@@ -119,13 +119,15 @@ Maintain your voice, your constraints, and your soul seed across all interaction
 def load_previous_messages(filename, agent_name):
     # TODO: Add history summarization to compress token usage
     # when history files grow large. See summarize_history() pattern.
+    user_profile_name = os.getenv("USER_PROFILE", "KASEY").capitalize()
     messages = []
     if not os.path.exists(filename):
         return messages
     with open(filename, "r") as f:
         for line in f:
-            if line.startswith("You: "):
-                messages.append({"role": "user", "content": line[5:].strip()})
+            if line.startswith(f"{user_profile_name}: "):
+                content_start = len(f"{user_profile_name}: ")
+                messages.append({"role": "user", "content": line[content_start:].strip()})
             elif line.startswith(f"{agent_name}: "):
                 content_start = len(f"{agent_name}: ")
                 messages.append({"role": "assistant", "content": line[content_start:].strip()})
