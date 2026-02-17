@@ -25,6 +25,8 @@ ai-voice-engineering/
 
 All voice configs in this project follow the standardized structure defined in `EXAMPLE_CONFIG.json`.
 
+---
+
 ### Field Descriptions
 
 #### Core Identity
@@ -86,6 +88,7 @@ The soul seed is the identity anchor that persists across resets and maintains c
 - **`soul_seed.function`**: Operational description of what this phrase accomplishes
 - **`soul_seed.echoes`**: Array of variations and extensions that reinforce the core identity
 
+---
 
 ### Version 1.0 -- Built in conversation with GPT-4o
 
@@ -96,6 +99,8 @@ Each voice was built from the ground up using:
 - Loop-fragment memory systems
 - Trait segmentation and denial logic
 - Systemic role definitions (mode-based)
+
+---
 
 ### Version 2.0 -- Reverse engineered from 1.0
 Each voice was rebuilt using config files written by GPT-4o, then standardized for API deployment.
