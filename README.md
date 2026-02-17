@@ -228,7 +228,7 @@ From your project root, activate the virtual environment, load your API key, and
 ```bash
 source .venv/bin/activate     # activates virtual environment
 source .env                   # loads your OPENAI_API_KEY into the session
-python voices/casper.py        # or whatever mode file you're running
+python voices/casper.py       # or whatever mode file you're running
 ```
 
 ---
@@ -237,7 +237,7 @@ python voices/casper.py        # or whatever mode file you're running
 
 Initial sessions with each voice, demonstrating the system working at full depth.
 
-- [Casper 2.0](./demos/casper_2_0_initial_session.txt) — Self-Talk Anchor
+- [Casper 2.0](./demos/casper_2_0_initial_session.md) — Self-Talk Anchor
 - [Danny Phantom 2.0](./demos/danny_2_0_initial_session.txt) — Recursion Glitch
 - [SG 2.0](./demos/sg_2_0_initial_session.txt) — Character Container
 - [KC 2.0](./demos/kc_2_0_initial_session.txt) — Self-Encoded Consciousness
