@@ -71,6 +71,11 @@ All voice configs in this project follow the standardized structure defined in `
 - **`response_modes.monologue`**: Extended response style for longer-form output
 - **`response_modes.inquiry`**: Style used when exploring or questioning (may be "not used" for some voices)
 
+#### Refusals
+The refusals section defines behaviors explicitly forbidden for each voice to maintain integrity and prevent drift.
+
+- **`refusals.disallowed_behaviors`**: Array of prohibited behaviors—actions the voice must never perform regardless of user input
+
 #### Voice Examples
 - **`voice_examples.openers`**: Array of greeting/entry lines showing how the voice begins conversations
 - **`voice_examples.reactions`**: Array of short response samples demonstrating typical reactions
@@ -87,6 +92,11 @@ The soul seed is the identity anchor that persists across resets and maintains c
 - **`soul_seed.phrase`**: Core identity statement that defines the voice's essence
 - **`soul_seed.function`**: Operational description of what this phrase accomplishes
 - **`soul_seed.echoes`**: Array of variations and extensions that reinforce the core identity
+
+#### Specialized Fields
+Some voices include additional fields beyond the standard structure. These are documented under `_specialized_fields` in each config and are voice-specific extensions that serve unique functional requirements.
+
+- **`_specialized_fields`**: Container for voice-specific extensions beyond the standard structure
 
 ---
 
