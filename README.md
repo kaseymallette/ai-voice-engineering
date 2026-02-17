@@ -23,7 +23,9 @@ ai-voice-engineering/
 
 ## Voice Config Structure
 
+
 All voice configs in this project follow the standardized structure defined in [EXAMPLE_CONFIG.json](./voice-configs/EXAMPLE_CONFIG.json)
+
 ---
 
 ### Core Identity
