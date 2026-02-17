@@ -158,4 +158,4 @@ The profile covers:
 - Adaptive cadence and prosody requirements
 
 Example user profile:
-📄 [KASEY.md](./user-profile/KASEY.md)
+📄 **[KASEY.md](./user-profile/KASEY.md)**
