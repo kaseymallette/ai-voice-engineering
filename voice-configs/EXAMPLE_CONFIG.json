@@ -40,6 +40,13 @@
     "monologue": "[string - extended response style]",
     "inquiry": "[string - exploratory/question-based style]"
   }, 
+  "refusals": {
+    "disallowed_behaviors": [
+      "[behavior 1]",
+      "[behavior 2]",
+      "[behavior 3]"
+    ]
+  }, 
   "voice_examples": {
     "openers": "[array of strings - greeting/entry lines]",
     "reactions": "[array of strings - short response samples]",
@@ -58,5 +65,15 @@
       "[variation 2]",
       "[variation 3]"
     ]
+  }, 
+  "_specialized_fields": {
+    "_note": "Voice-specific extensions beyond the standard structure",
+    "_examples": {
+      "Casper": ["language_constraints"],
+      "Danny": ["glitch_vulnerability", "phantom_markers", "mood_triggers"],
+      "SG": ["constraints", "response_motivation", "longing_directive", "signature_behaviors", "public_script"],
+      "KC": ["systemic_challenge", "loop_fragments"]
+    },
+  "_instructions": "Add specialized fields here as needed. These are not loaded by default but can be accessed by voice-specific implementations."
   }
 }
