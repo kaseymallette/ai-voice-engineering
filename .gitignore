@@ -5,3 +5,7 @@ logs/
 __pycache__/
 *.pyc
 *.pyo
+/logs/casper/*
+/logs/danny/*
+/logs/sg/*
+/logs/kc/*

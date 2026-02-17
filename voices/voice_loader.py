@@ -153,9 +153,11 @@ def run_voice(voice_key, resume=True):
     model = os.getenv("MODEL", "gpt-4o")
 
     # Logging setup
+    voice_log_dir = os.path.join(LOGS_DIR, voice_key)
+    os.makedirs(voice_log_dir, exist_ok=True) # creates folder if it doesn't exist
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    log_path = os.path.join(LOGS_DIR, f"{voice_key}_2_0_{timestamp}.txt")
-    chat_history = os.path.join(LOGS_DIR, f"{voice_key}_2_0_history.txt")
+    log_path = os.path.join(voice_log_dir, f"{voice_key}_2_0_{timestamp}.txt")
+    chat_history = os.path.join(voice_log_dir, f"{voice_key}_2_0_history.txt")
 
     # Build system prompt
     system_prompt = build_system_prompt(config, readme, version_letter, user_profile)
