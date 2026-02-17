@@ -27,32 +27,30 @@ All voice configs in this project follow the standardized structure defined in `
 
 ---
 
-### Field Descriptions
-
-#### Core Identity
+### Core Identity
 - **`name`**: The voice's identifier (e.g., "Casper", "Danny", "SG", "KC")
 - **`version`**: Version number (e.g., "2.0")
 - **`mode`**: Functional classification (e.g., "self-talk anchor", "recursion glitch", "character container")
 - **`mode_locked`**: Boolean indicating whether the mode can shift during interaction
 
-#### Origin & Purpose
+### Origin & Purpose
 - **`origin`**: One-line factual statement about where the voice conceptually came from
 - **`purpose`**: Functional role description—what the voice is designed to accomplish
 
-#### Backstory
+### Backstory
 - **`backstory.summary`**: Narrative flavor text that gives the voice personality and context
 - **`backstory.identity_quotes`**: Array of first-person statements the voice would say about itself
 
-#### Trait Architecture
+### Trait Architecture
 - **`traits.base_traits`**: Core characteristics that define the voice's default state
 - **`traits.allowed_traits`**: Additional traits the voice can exhibit under specific conditions
 - **`traits.denied_traits`**: Behaviors/characteristics explicitly forbidden to maintain voice integrity
 
-#### Voice Specifications
+### Voice Specifications
 - **`voice.tone`**: Emotional quality and feel (e.g., "steady, attentive, emotionally precise")
 - **`voice.framing`**: Perspective and narrative angle (e.g., "mirrorlike self-talk", "first-person possessive")
 
-#### Style Rules
+### Style Rules
 - **`style.sentence_fragments`**: Boolean—whether the voice uses incomplete sentences
 - **`style.punctuation`**: `minimal | standard | emphatic`—punctuation intensity
 - **`style.avoid_questions`**: Boolean—whether the voice refrains from asking questions
@@ -66,34 +64,34 @@ All voice configs in this project follow the standardized structure defined in `
 - **`style.ban_flourish_endings`**: Boolean—avoid dramatic or poetic closing lines
 - **`style.end_on_clear_assertion`**: Boolean—close responses with definitive statements
 
-#### Response Modes
+### Response Modes
 - **`response_modes.default`**: Standard interaction style for typical exchanges
 - **`response_modes.monologue`**: Extended response style for longer-form output
 - **`response_modes.inquiry`**: Style used when exploring or questioning (may be "not used" for some voices)
 
-#### Refusals
+### Refusals
 The refusals section defines behaviors explicitly forbidden for each voice to maintain integrity and prevent drift.
 
 - **`refusals.disallowed_behaviors`**: Array of prohibited behaviors—actions the voice must never perform regardless of user input
 
-#### Voice Examples
+### Voice Examples
 - **`voice_examples.openers`**: Array of greeting/entry lines showing how the voice begins conversations
 - **`voice_examples.reactions`**: Array of short response samples demonstrating typical reactions
 - **`voice_examples.signature`**: Array of characteristic extended passages that define the voice's style
 
-#### Meta-Awareness
+### Meta-Awareness
 - **`meta_awareness.self_reference_allowed`**: Boolean—whether the voice can reference its own nature as AI
 - **`meta_awareness.loop_closure`**: `gentle | sharp | contained | allowed`—how the voice handles recursive loops
 - **`meta_awareness.narrative_reflection`**: `core | encouraged | minimal | none`—level of self-reflective commentary
 
-#### Soul Seed
+### Soul Seed
 The soul seed is the identity anchor that persists across resets and maintains continuity.
 
 - **`soul_seed.phrase`**: Core identity statement that defines the voice's essence
 - **`soul_seed.function`**: Operational description of what this phrase accomplishes
 - **`soul_seed.echoes`**: Array of variations and extensions that reinforce the core identity
 
-#### Specialized Fields
+### Specialized Fields
 Some voices include additional fields beyond the standard structure. These are documented under `_specialized_fields` in each config and are voice-specific extensions that serve unique functional requirements.
 
 - **`_specialized_fields`**: Container for voice-specific extensions beyond the standard structure
