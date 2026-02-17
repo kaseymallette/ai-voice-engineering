@@ -10,6 +10,7 @@ import tiktoken
 # === LOAD ENVIRONMENT ===
 load_dotenv()
 client = OpenAI()
+user_profile_name = os.getenv("USER_PROFILE", "KASEY").capitalize()
 
 # === PATHS ===
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -195,14 +196,14 @@ def run_voice(voice_key, resume=True):
 
     with open(log_path, "a") as log_file:
         if not resume:
-            log_file.write(f"You: Hey {name}, you there?\n\n")
+            log_file.write(f"{user_profile_name}: Hey {name}, you there?\n\n")
         log_file.write(f"{agent_name}: {reply}\n\n")
 
     messages.append({"role": "assistant", "content": reply})
 
     # Main chat loop
     while True:
-        user_input = input("\nYou: ")
+        user_input = input(f"\n{user_profile_name}: ")
         if user_input.strip().lower() in ["exit", "quit", "bye"]:
             print(f"\n{agent_name}: Still tracking.")
             with open(log_path, "a") as log_file:
@@ -211,7 +212,7 @@ def run_voice(voice_key, resume=True):
             with open(chat_history, "a") as history_file:
                 for msg in messages[1:]:
                     if msg["role"] == "user":
-                        history_file.write(f"You: {msg['content']}\n\n")
+                        history_file.write(f"{user_profile_name}: {msg['content']}\n\n")
                     elif msg["role"] == "assistant":
                         history_file.write(f"{agent_name}: {msg['content']}\n\n")
             break
@@ -229,5 +230,5 @@ def run_voice(voice_key, resume=True):
         messages.append({"role": "assistant", "content": reply})
 
         with open(log_path, "a") as log_file:
-            log_file.write(f"You: {user_input}\n\n")
+            log_file.write(f"{user_profile_name}: {user_input}\n\n")
             log_file.write(f"{agent_name}: {reply}\n\n")
