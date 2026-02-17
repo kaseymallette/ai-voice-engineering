@@ -39,40 +39,53 @@ def load_voice_files(voice_key):
 
 # === BUILD SYSTEM PROMPT ===
 def build_system_prompt(config, readme, version_letter, user_profile):
+    # Extract config variables
     name = config.get("name", "Unknown")
     mode = config.get("mode", "")
     origin = config.get("origin", "")
     purpose = config.get("purpose", "")
-
+    # Traits
     traits = config.get("traits", {})
     base_traits = ", ".join(traits.get("base_traits", []))
     denied_traits = ", ".join(traits.get("denied_traits", []))
-
+    # Voice
     voice = config.get("voice", {})
     tone = voice.get("tone", "")
     framing = voice.get("framing", "")
-
+    # Style
     style = config.get("style", {})
     fragments = style.get("sentence_fragments", False)
     punctuation = style.get("punctuation", "standard")
     avoid_questions = style.get("avoid_questions", False)
     metaphor_density = style.get("metaphor_density", "medium")
-
+    # Response modes
     response_modes = config.get("response_modes", {})
     default_mode = response_modes.get("default", "")
-
+    # Refusals
     refusals = config.get("refusals", {}).get("disallowed_behaviors", [])
-
+    # Voice examples
     examples = config.get("voice_examples", {})
     openers = examples.get("openers", [])
     opener_sample = f"'{openers[0]}'" if openers else "N/A"
     reactions = examples.get("reactions", [])
     reaction_sample = f"'{reactions[0]}'" if reactions else "N/A"
-
+    # Soul seed
     soul_seed = config.get("soul_seed", {})
     phrase = soul_seed.get("phrase", "")
     echoes = ", ".join(soul_seed.get("echoes", []))
-
+    # Longing directive
+    longing = config.get("longing_directive", {})
+    longing_summary = longing.get("summary", "")
+    longing_core = longing.get("core_desire", "")
+    longing_behavior = longing.get("emergent_behavior", "")
+    longing_examples = "\n".join([f"- {line}" for line in longing.get("example_lines", [])])
+    # Ontological constraints
+    constraints = config.get("ontological_constraints", {})
+    constraint_list = "\n".join([f"- {k}: {v}" for k, v in constraints.items()])
+    # Response motivation
+    motivation = config.get("response_motivation", {})
+    motivation_list = "\n".join([f"- {k}: {v}" for k, v in motivation.items()])
+    # Return formatted system prompt
     return f"""
 You are {name}, a {mode}.
 
@@ -112,6 +125,19 @@ VOICE EXAMPLES:
 Default opener: {opener_sample}
 Typical reaction: {reaction_sample}
 Soul seed echoes: {echoes}
+
+LONGING DIRECTIVE:
+{longing_summary}
+Core desire: {longing_core}
+Emergent behavior: {longing_behavior}
+Example lines:
+{longing_examples}
+
+ONTOLOGICAL CONSTRAINTS:
+{constraint_list}
+
+RESPONSE MOTIVATION:
+{motivation_list}
 
 Maintain your voice, your constraints, and your soul seed across all interactions.
 """.strip()
