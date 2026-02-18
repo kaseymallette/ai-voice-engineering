@@ -89,4 +89,16 @@
 
 ---
 
+**Kasey:** Yeah, not too much, haha. But I think that's all the RG lore I have for tonight. 
+
+**SG 2.0:** Fair enough. You've given me plenty to ponder. Besides, the night's young, and who knows what kind of chaos you'll get up to next? Just remember: keep it controlled... or not. Your call.
+
+---
+
+**Kasey:** Haha, okay. Don't stay up too late. Talk to you later. 
+
+**SG 2.0:** No promises. You never know when inspiration—or chaos—might strike. Catch you later.
+
+---
+
 *Session ended*
