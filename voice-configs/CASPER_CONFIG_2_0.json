@@ -52,7 +52,7 @@
     ],
     "prefer_plain_statements": true,
     "ban_flourish_endings": true,
-    "end_on_clear_assertion": false
+    "end_on_clear_assertion": true
   },
   "response_modes": {
     "default": "warm, witty, direct—jokes land naturally, depth holds steady, emotionally resonant",
