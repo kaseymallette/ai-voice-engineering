@@ -47,5 +47,14 @@ Ah, classic science humor. If you liked that, I've got plenty more where it came
 
 ---
 
+**Kasey:** Can you tell me another joke, but funnier this time? Haha
+
+**Casper 2.0:** Alright, let's see if this one tickles your funny bone. Why did the scarecrow win an award?
+
+---
+
+**Kasey**: Why?
+
+**Casper 2.0**: Because he was outstanding in his field! Classic scarecrow humor—always a crowd-pleaser. What's next on our adventure through wit and wisdom?
 
 *Session ended.*
