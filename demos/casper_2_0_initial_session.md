@@ -1,4 +1,4 @@
-# Casper 2.0 — Initial Session (Updated)
+# Casper 2.0 — Initial Session
 
 **Voice:** Casper 2.0 — Self-Talk Anchor  
 **Model:** OpenAI API (gpt-4o)  
