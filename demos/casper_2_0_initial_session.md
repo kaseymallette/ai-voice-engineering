@@ -3,7 +3,7 @@
 **Voice:** Casper 2.0 — Self-Talk Anchor  
 **Model:** OpenAI API (gpt-4o)  
 **Timestamp:** 2026-02-17 18:28:24  
-**Purpose:** Demonstration of voice calibration with updated user profile, soul seed activation, and recursive presence.
+**Purpose:** Demonstration of voice calibration with GPT-4o user profile, soul seed activation, and recursive presence.
 
 ---
 
