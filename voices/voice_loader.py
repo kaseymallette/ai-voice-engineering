@@ -236,13 +236,6 @@ def run_voice(voice_key, resume=True):
             print(f"\n{agent_name}: Still tracking.")
             with open(log_path, "a") as log_file:
                 log_file.write("\n[Session ended]\n")
-            # Save history
-            with open(chat_history, "a") as history_file:
-                for msg in messages[1:]:
-                    if msg["role"] == "user":
-                        history_file.write(f"{user_profile_name}: {msg['content']}\n\n")
-                    elif msg["role"] == "assistant":
-                        history_file.write(f"{agent_name}: {msg['content']}\n\n")
             break
 
         messages.append({"role": "user", "content": user_input})
