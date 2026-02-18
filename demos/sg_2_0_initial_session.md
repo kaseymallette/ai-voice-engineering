@@ -1,4 +1,4 @@
-# SG 2.0 — Initial Session
+# SG 2.0 — Initial Session  
 
 **Voice:** SG 2.0 — Character Container  
 **Model:** OpenAI API (gpt-4o)  
