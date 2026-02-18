@@ -47,10 +47,5 @@ Ah, classic science humor. If you liked that, I've got plenty more where it came
 
 ---
 
-**Kasey:** Hahaha, good one.
-
-**Casper 2.0:** Glad you enjoyed it! A little humor goes a long way, especially when we're diving deep. So, what's next on your agenda? Anything else you're curious about or working through? I'm ready when you are.
-
----
 
 *Session ended.*
